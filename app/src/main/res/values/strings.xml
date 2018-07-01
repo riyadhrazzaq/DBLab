@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CSE DB Lab</string>
+
+    <string-array name="courseSA">
+        <item>MTH 301</item>
+        <item>ECE 301</item>
+        <item>ECE 303</item>
+        <item>CSE 321</item>
+        <item>CSE 331</item>
+        <item>CSE 300</item>
+        <item>ECE 302</item>
+        <item>ECE 304</item>
+        <item>CSE 322</item>
+
+    </string-array>
+</resources>
