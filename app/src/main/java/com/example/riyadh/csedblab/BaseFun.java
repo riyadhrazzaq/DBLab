@@ -78,21 +78,25 @@ public class BaseFun extends SQLiteOpenHelper {
 
     }
 
-    String[] getByReg(int reg) {
+    int getByReg(int reg) {
         SQLiteDatabase sq = this.getReadableDatabase();
         String q = "select * from " + TABLE_NAME + " where " + col_reg + " =" + reg;
         Cursor c = sq.rawQuery(q, null);
-        String[] res = new String[c.getCount()];
-        int i = 0;
-        for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
-            res[i++] = c.getString(c.getColumnIndex(col_reg)) + " | Course: " + c.getString(c.getColumnIndex(col_course)) + " | Title: " +
-                    c.getString(c.getColumnIndex(col_title));
-        }
-        return res;
+        int res = c.getColumnCount();
+
+        return  res;
 
     }
 
-    void removeAll() {
+    void removeByReg(int reg) {
+        SQLiteDatabase sq = this.getWritableDatabase();
+        String q = "delete from "+TABLE_NAME+" where "+col_reg+" ="+reg;
+        sq.execSQL(q);
+
+    }
+
+    void update(String reg, String title, String description){
+        ContentValues cv = new ContentValues();
 
     }
 

@@ -5,51 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="5"
+    android:weightSum="4"
     tools:context="com.example.riyadh.csedblab.display">
 
-
-
-       <TextView
-           android:hint="reg"
-           android:layout_weight=".5"
-           android:layout_width="match_parent"
-           android:layout_height="0dp" />
-
     <TextView
-           android:hint="title"
-           android:layout_weight=".5"
-           android:layout_width="match_parent"
-           android:layout_height="0dp" />
+        android:id="@+id/regTV"
+        android:gravity="center_horizontal"
+        android:layout_weight=".5"
+        android:hint="Reg"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <TextView
+        android:id="@+id/titleTV"
+        android:gravity="center_horizontal"
+        android:layout_weight=".5"
+        android:hint="Title"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 
-       <TextView
-           android:hint="description"
-           android:layout_weight="3.5"
-           android:layout_width="match_parent"
-           android:layout_height="0dp" />
 
+    <ScrollView
+        android:layout_weight="2.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
+        <TextView
+            android:id="@+id/desTV"
+            android:hint="Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
+    </ScrollView>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
         android:layout_weight=".5"
+        android:weightSum="2"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/editBT"
+            android:text="Edit"
             android:layout_weight="1"
-            android:text="Remove" />
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/removeBT"
+            android:text="Remove"
             android:layout_weight="1"
-            android:text="Edit" />
-
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
+
 
 </LinearLayout>
