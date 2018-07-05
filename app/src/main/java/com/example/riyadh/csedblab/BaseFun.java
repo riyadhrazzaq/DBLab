@@ -14,10 +14,10 @@ import android.util.Log;
 public class BaseFun extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "db";
     private static final String TABLE_NAME = "tab";
-    private static final String col_reg = "reg";
-    private static final String col_course = "course";
-    private static final String col_des = "des";
-    private static final String col_title = "title";
+    private static final String col_reg = "reg";        //0
+    private static final String col_course = "course";  //1
+    private static final String col_des = "des";        //2
+    private static final String col_title = "title";    //3
 
 
     BaseFun(Context c) {
@@ -78,14 +78,11 @@ public class BaseFun extends SQLiteOpenHelper {
 
     }
 
-    int getByReg(int reg) {
+    Cursor getByReg(int reg) {
         SQLiteDatabase sq = this.getReadableDatabase();
         String q = "select * from " + TABLE_NAME + " where " + col_reg + " =" + reg;
         Cursor c = sq.rawQuery(q, null);
-        int res = c.getColumnCount();
-
-        return  res;
-
+        return c;
     }
 
     void removeByReg(int reg) {

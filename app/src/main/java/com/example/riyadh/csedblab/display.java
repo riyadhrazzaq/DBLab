@@ -31,19 +31,21 @@ public class display extends AppCompatActivity {
         b2 = (Button) findViewById(R.id.removeBT);
 
         t1.setText(regId);
-        int c= fun.getByReg(Integer.parseInt(regId));
+        Cursor c= fun.getByReg(Integer.parseInt(regId));
         Log.d("displayMsg", String.valueOf(c));
-        Toast.makeText(this, c, Toast.LENGTH_SHORT).show();
 
+        c.moveToFirst();
 
-        /*
-        t2.setText( c.getString(c.getColumnIndex("title")) );
-        t3.setText(c.getString(2));
+        //Log.e("say",String.valueOf(c.getString(2)));
+        //Log.e("say",String.valueOf(c.getString(3)));
+        t2.setText(String.valueOf(c.getString(2)));
+        t3.setText(String.valueOf(c.getString(3)));
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Not yet working",Toast.LENGTH_SHORT).show();
+                
+
             }
         });
 
@@ -54,7 +56,7 @@ public class display extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),showing.class));
             }
         });
-        */
+
 
 
 
