@@ -32,6 +32,7 @@
         android:layout_height="0dp">
 
         <TextView
+            android:gravity="center"
             android:id="@+id/desTV"
             android:hint="Description"
             android:layout_width="match_parent"
