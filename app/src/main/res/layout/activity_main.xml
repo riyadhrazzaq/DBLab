@@ -4,48 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/matteDark"
+    android:gravity="center"
     android:orientation="vertical"
-    android:background="#fff"
     tools:context="com.example.riyadh.csedblab.MainActivity">
 
     <TextView
-        android:padding="5dp"
-        android:textColor="#fff"
-        android:background="@color/colorPrimary"
-        android:textSize="30sp"
-        android:layout_gravity="center"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_corner"
         android:gravity="center_horizontal"
-        android:text="Database Project | 2018" />
+        android:padding="5dp"
+        android:text="Database Project | 2018"
+        android:textColor="#000"
+        android:textSize="30sp" />
 
     <LinearLayout
 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/addBT"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="#fff"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="New Project" />
+        <Button
+            android:id="@+id/addBT"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/matteDark"
+            android:drawableLeft="@drawable/ic_add"
+            android:text="New Project"
+            android:textColor="#fff" />
 
-    <Button
-        android:id="@+id/viewBT"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="#fff"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Existing Projects" />
+        <Button
+            android:id="@+id/viewBT"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+           android:background="@color/matteDark"
+            android:drawableLeft="@drawable/ic_existing"
+            android:text="Existing Projects"
+            android:textColor="#fff" />
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>

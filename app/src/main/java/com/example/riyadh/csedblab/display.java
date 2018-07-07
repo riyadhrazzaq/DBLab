@@ -30,6 +30,7 @@ public class display extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
+
         t1 = (TextView) findViewById(R.id.regTV);
         t2 = (TextView) findViewById(R.id.titleTV);
         t3 = (TextView) findViewById(R.id.desTV);
@@ -72,7 +73,7 @@ public class display extends AppCompatActivity {
 
                         Toast.makeText(display.this, "Database Updated", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
-
+                        fun.update(regId,title,des);
                         //updating display
                         t2.setText(title);
                         t3.setText(des);

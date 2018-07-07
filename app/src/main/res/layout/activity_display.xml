@@ -4,62 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/matteDarkLighter"
     android:orientation="vertical"
     android:weightSum="4"
     tools:context="com.example.riyadh.csedblab.display">
 
     <TextView
         android:id="@+id/regTV"
-        android:gravity="center_horizontal"
-        android:layout_weight=".5"
-        android:hint="Reg"
-        android:textSize="20sp"
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:gravity="center_horizontal"
+        android:hint="Reg"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
     <TextView
         android:id="@+id/titleTV"
-        android:gravity="center_horizontal"
-        android:layout_weight=".5"
-        android:hint="Title"
-        android:textSize="20sp"
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:gravity="center_horizontal"
+        android:hint="Title"
+        android:textColor="#fff"
+        android:textSize="20sp" />
 
 
     <ScrollView
-        android:layout_weight="2.5"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight="2.5">
 
         <TextView
-            android:gravity="center"
             android:id="@+id/desTV"
-            android:hint="Description"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:hint="Description"
+            android:textColor="#fff" />
 
     </ScrollView>
 
     <LinearLayout
-        android:layout_weight=".5"
-        android:weightSum="2"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <Button
             android:id="@+id/editBT"
-            android:text="Edit"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/matteDark"
+            android:text="Edit"
+            android:textColor="#fff" />
 
         <Button
             android:id="@+id/removeBT"
-            android:text="Remove"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/matteDark"
+            android:text="Remove"
+            android:textColor="#fff" />
     </LinearLayout>
 
 

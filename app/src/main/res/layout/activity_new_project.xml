@@ -5,18 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="4"
+    android:background="@color/matteDark"
+    android:weightSum="3"
 
     tools:context="com.example.riyadh.csedblab.newProject">
 
 
     <Spinner
+        android:textColor="#fff"
         android:id="@+id/courseSpin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".5" />
 
     <EditText
+        android:textColor="#fff"
         android:id="@+id/regET"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,6 +28,7 @@
         android:inputType="number" />
 
     <EditText
+        android:textColor="#fff"
         android:id="@+id/titleET"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -32,6 +36,7 @@
         android:hint="Title" />
 
     <EditText
+        android:textColor="#fff"
         android:id="@+id/desET"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -43,6 +48,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".5"
-        android:text="Save" />
+        android:background="@color/matteDark"
+        android:text="Save"
+        android:textColor="#fff"
+        android:textSize="25dp" />
 
 </LinearLayout>

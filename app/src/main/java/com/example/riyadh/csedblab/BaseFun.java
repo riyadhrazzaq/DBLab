@@ -94,11 +94,12 @@ public class BaseFun extends SQLiteOpenHelper {
 
     void update(String reg, String title, String des){
         SQLiteDatabase sq = this.getWritableDatabase();
-        String q = "UPDATE " +TABLE_NAME+
-                " SET"+ col_reg+" = "+reg+ ","+ col_title+"=" +title+","+ col_des+"="+des+
-                " WHERE " +col_reg+"="+reg;
-        Log.d("say",q);
-        sq.execSQL(q);
+        Log.d("say","ok");
+        ContentValues cv  = new ContentValues();
+        cv.put(col_title,title);
+        cv.put(col_des,des);
+        sq.update( TABLE_NAME,cv,col_reg+"="+reg,null );
+        Log.d("say","updated");
 
 
 
